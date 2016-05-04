@@ -31,6 +31,7 @@ gem 'sprockets', '2.11.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
+gem 'devise', '>= 3.2.4'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
