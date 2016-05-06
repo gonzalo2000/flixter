@@ -8,15 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div id="wrap">
+    <%= render "layouts/navbar" %>
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
 
-  <%= render "layouts/navbar" %>
-  <% if notice.present? %>
-    <p class="alert alert-info"><%= notice %></p>
-  <% end %>
-  <% if alert.present? %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-  <%= yield %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+    <%= yield %>
+  </div>
+
+  <br class="clr">
+  
+  <div id="footer">
+    <div class="container">
+      <b>Footer!</b>
+      <%= link_to 'Link', '#' %>
+    </div>
+  </div>
   
 </body>
 </html>
